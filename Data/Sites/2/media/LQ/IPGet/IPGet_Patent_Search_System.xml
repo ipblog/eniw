@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<XML_DIZ_INFO>
+	<MASTER_PAD_VERSION_INFO>
+		<MASTER_PAD_VERSION>3.11</MASTER_PAD_VERSION>
+		<MASTER_PAD_EDITOR>PADGen 3.1.1.50 http://www.padgen.org</MASTER_PAD_EDITOR>
+		<MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://pad.asp-software.org</MASTER_PAD_INFO>
+	</MASTER_PAD_VERSION_INFO>
+	<Company_Info>
+		<Company_Name>IPWOM</Company_Name>
+		<Address_1 />
+		<Address_2 />
+		<City_Town>Beijing</City_Town>
+		<State_Province>Beijing</State_Province>
+		<Zip_Postal_Code />
+		<Country>China</Country>
+		<Company_WebSite_URL>http://en.ipwom.com</Company_WebSite_URL>
+		<Contact_Info>
+			<Author_First_Name>john</Author_First_Name>
+			<Author_Last_Name>mjohn</Author_Last_Name>
+			<Author_Email>frhave@sina.com</Author_Email>
+			<Contact_First_Name>john</Contact_First_Name>
+			<Contact_Last_Name>mjohn</Contact_Last_Name>
+			<Contact_Email>frhave@sina.com</Contact_Email>
+		</Contact_Info>
+		<Support_Info>
+			<Sales_Email>ipwom@ipwom.com</Sales_Email>
+			<Support_Email>ipwom@ipwom.com</Support_Email>
+			<General_Email>ipwom@ipwom.com</General_Email>
+			<Sales_Phone />
+			<Support_Phone />
+			<General_Phone />
+			<Fax_Phone />
+		</Support_Info>
+	</Company_Info>
+	<Program_Info>
+		<Program_Name>IPGet Patent Search System</Program_Name>
+		<Program_Version>2.3</Program_Version>
+		<Program_Release_Month>04</Program_Release_Month>
+		<Program_Release_Day>01</Program_Release_Day>
+		<Program_Release_Year>2012</Program_Release_Year>
+		<Program_Cost_Dollars>50.00</Program_Cost_Dollars>
+		<Program_Cost_Other_Code />
+		<Program_Cost_Other />
+		<Program_Type>Shareware</Program_Type>
+		<Program_Release_Status>Major Update</Program_Release_Status>
+		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
+		<Program_OS_Support>Win7 x32,Win7 x64,WinOther,WinServer,WinVista,WinVista x64,WinXP,Other</Program_OS_Support>
+		<Program_Language>English,Chinese,ChineseSimplified</Program_Language>
+		<Program_Change_Info />
+		<Program_Specific_Category>Business</Program_Specific_Category>
+		<Program_Category_Class>Business::Other</Program_Category_Class>
+		<Program_System_Requirements />
+		<File_Info>
+			<File_Size_Bytes>6774057</File_Size_Bytes>
+			<File_Size_K>6344</File_Size_K>
+			<File_Size_MB>6.2</File_Size_MB>
+		</File_Info>
+		<Expire_Info>
+			<Has_Expire_Info>N</Has_Expire_Info>
+			<Expire_Count>60</Expire_Count>
+			<Expire_Based_On>Days</Expire_Based_On>
+			<Expire_Other_Info />
+			<Expire_Month />
+			<Expire_Day />
+			<Expire_Year />
+		</Expire_Info>
+	</Program_Info>
+	<Program_Descriptions>
+		<English>
+			<Keywords>patent search, patent download,patent management, IPGet</Keywords>
+			<Char_Desc_45>a patent search, patent downloading software</Char_Desc_45>
+			<Char_Desc_80>a patent search, patent downloading and patent management software</Char_Desc_80>
+			<Char_Desc_250>IPGet patent search system is a patent search, patent downloading and patent management software for the patent worker, the intellectual property rights expert, the information expert, the legal expert and the scientific researchers. </Char_Desc_250>
+			<Char_Desc_450>IPGet patent search system is a patent search, patent downloading and patent management software for the patent worker, the intellectual property rights expert, the information expert, the legal expert and the scientific researchers. It integrates Europe, US , Japan, WIPO, Germany and so on ten authoritative free patent search websites. It can bulk download above websites patent's data and files.</Char_Desc_450>
+			<Char_Desc_2000>IPGet patent search system is a patent search, patent downloading and patent management software for the patent worker, the intellectual property rights expert, the information expert, the legal expert and the scientific researchers. It integrates Europe, US , Japan, WIPO, Germany and so on ten authoritative free patent search websites. It can bulk download above websites patent's  bibliographic data, legal status, patent family , cited documents, abstract figure, patent first page, patent document. Moreover it provides the local patent search,  create categoris, customize fields, electronic files  management, patents share etc patent management functions, therefore it is also a simple patent management system.
+
+IPGet patent search system is small and fast, all installation files total about 6.5M size . Simple and quick installation , ordinary users can install their own , completely without IT staff to help .
+
+More detailed Features see IPGet Patent Search System Help Document.
+
+IPGet patent search system Personal Edition provides a fully functional free trial, only need  create an account on the web.</Char_Desc_2000>
+		</English>
+	</Program_Descriptions>
+	<Web_Info>
+		<Application_URLs>
+			<Application_Info_URL>http://en.ipwom.com</Application_Info_URL>
+			<Application_Order_URL>http://en.ipwom.com/subscribe.aspx</Application_Order_URL>
+			<Application_Screenshot_URL>http://www.ipwom.com/Data/Sites/2/LQ/IPGet/Presentation/IPGet-UI.jpg</Application_Screenshot_URL>
+			<Application_Icon_URL>http://en.ipwom.com/Data/Sites/2/LQ/IPGet/IPGet-Icon.gif</Application_Icon_URL>
+			<Application_XML_File_URL>http://en.ipwom.com/Data/Sites/2/LQ/IPGet/IPGet_Patent_Search_System.xml</Application_XML_File_URL>
+		</Application_URLs>
+		<Download_URLs>
+			<Primary_Download_URL>http://en.ipwom.com/Data/Sites/1/LQ/Files/IPGet_SetupEn.zip</Primary_Download_URL>
+			<Secondary_Download_URL />
+			<Additional_Download_URL_1 />
+			<Additional_Download_URL_2 />
+		</Download_URLs>
+	</Web_Info>
+	<Permissions>
+		<Distribution_Permissions />
+		<EULA />
+	</Permissions>
+	<ASP>
+		<ASP_FORM>Y</ASP_FORM>
+		<ASP_Member>N</ASP_Member>
+		<ASP_Member_Number />
+	</ASP>
+</XML_DIZ_INFO>

@@ -1,0 +1,534 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head id="ctl00_Head1" profile="http://dublincore.org/documents/dcq-html/"><title>
+	IPGet Patent Search System-Tutorial1: Download Patents From US PatFT
+</title><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /><link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel='stylesheet' type='text/css' href='/ClientScript/jqueryui/themes/start/jquery-ui.css' />
+<link rel='stylesheet' type='text/css' href='csshandlerd812.css?skin=artisteer-30headermenu&amp;s=2&amp;v=2.4.0.2&amp;sv=d0757f6f-645b-425f-85ab-1fe442fe05b0' />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="IPGet Patent Search System-Tutorial1: Download Patents From US PatFT-IPWOM Provide IPGet patent search system/IPGet patent download software/IPGet patent search software and patent statistical analysis etc intellectual property products and services" />
+<meta property="og:description" content="IPGet Patent Search System-Tutorial1: Download Patents From US PatFT-IPWOM Provide IPGet patent search system/IPGet patent download software/IPGet patent search software and patent statistical analysis etc intellectual property products and services" />
+<meta name="keywords" content="patent,search,download,statistical,analysis,software,system" />
+<link rel="search" type="application/opensearchdescription+xml" title="Intellectual Property Informationization Website Site Search" href="SearchEngineInfo.ashx" />
+    <!--[if IE]>
+	<meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" /><meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+	<![endif]-->
+    
+<link rel='shortcut icon' href='/Data/Sites/2/skins/artisteer-30headermenu/favicon.ico' />
+<script src="/ClientScript/jquery/jquery.min.js" type="text/javascript" ></script>
+<script src="/ClientScript/jqmojo/jquery-migrate1-0-0.js" type="text/javascript" ></script>
+<script src="/ClientScript/jqueryui/jquery-ui.min.js" type="text/javascript" ></script>
+<link rel='canonical' href='ipget-tutorials-patft.html' /><style type="text/css">
+	.ctl00_SiteMenu1_ctl00_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_SiteMenu1_ctl00_1 { text-decoration:none; }
+	.ctl00_SiteMenu1_ctl00_2 {  }
+	.ctl00_PageMenu1_ctl01_0 { text-decoration:none; }
+
+</style></head>
+<body id="ctl00_Body" class="pagebody">
+
+    <form method="post" action="/" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATEFIELDCOUNT" id="__VIEWSTATEFIELDCOUNT" value="4" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA1OTAyNzk1MQ9kFgJmD2QWBAIBDxYCHgdwcm9maWxlBSlodHRwOi8vZHVibGluY29yZS5vcmcvZG9jdW1lbnRzL2RjcS1odG1sL2QCAw9kFgICAw9kFhACDw8PFgQeCENzc0NsYXNzBTlhcnQtbGF5b3V0LWNlbGwgYXJ0LXNpZGViYXIxIGxlZnRzaWRlIGxlZnQyY29sdW1uIGNtc3pvbmUeBF8hU0ICAmQWAgIBD2QWAmYPDxYEHwEFCWFydC1ibG9jax8CAgJkFgICAw9kFgICAw8PFgQfAQUQYXJ0LWJsb2NrY29udGVudB8CAgJkFgICAQ9kFgICAw9kFgJmD2QWAgIBD2QWAmYQPCsACQIADxYIHgtfIURhdGFCb3VuZGceDERhdGFTb3VyY2VJRAURUGFnZU1hcERhdGFTb3VyY2UeDVBhdGhTZXBhcmF0b3IEfB4NTmV2ZXJFeHBhbmRlZGRkCBQrAAIFAzA6" />
+<input type="hidden" name="__VIEWSTATE1" id="__VIEWSTATE1" value="MBQrAAIWEB4EVGV4dAUpVHV0b3JpYWwxOiBEb3dubG9hZCBQYXRlbnRzIEZyb20gVVMgUGF0RlQeBVZhbHVlBSQzMmQ2NWNkYS0xMGNiLTRhNmMtYmM1Zi04ZTAzMzYzNmIzNGIeC05hdmlnYXRlVXJsBRx+L2lwZ2V0LXR1dG9yaWFscy1wYXRmdC5hc3B4HghEYXRhUGF0aAUDMzg3HglEYXRhQm91bmRnHghTZWxlY3RlZGceEFBvcHVsYXRlT25EZW1hbmRoHghFeHBhbmRlZGdkBQxjdGwwMCRjdGwxN3xkAhEPDxYEHwEFNWFydC1sYXlvdXQtY2VsbCBhcnQtY29udGVudCBjZW50ZXItbGVmdG1hcmdpbiBjbXN6b25lHwICAmQWAgIFD2QWAmYPZBYCAgIPDxYEHwEFCGFydC1wb3N0HwICAmQWAgIDD2QWAgIDDw8WBB8BBQ9hcnQtcG9zdGNvbnRlbnQfAgICZBYCAgEP" />
+<input type="hidden" name="__VIEWSTATE2" id="__VIEWSTATE2" value="ZBYEAgEPDxYCHgdWaXNpYmxlaGQWAgIBD2QWAmYPZBYCAgUPZBYCZg8WAh4KQ2FsbGJhY2tJRAUpY3RsMDAkbWFpbkNvbnRlbnQkY3RsMDAkUmF0aW5nJFVzZXJSYXRpbmdkAg0PDxYCHw9oZBYCAgEPZBYCZg9kFgICBQ9kFgJmDxYCHxAFL2N0bDAwJG1haW5Db250ZW50JGN0bDAwJFJhdGluZ0JvdHRvbSRVc2VyUmF0aW5nZAITDw8WBh8BBS5hcnQtbGF5b3V0LWNlbGwgYXJ0LXNpZGViYXIyIHJpZ2h0c2lkZSBjbXN6b25lHwICAh8PaGRkAhUPDxYGHwEFE2FsdGNvbnRlbnQxIGNtc3pvbmUfAgICHw9oZGQCFw8PFgYfAQUTYWx0Y29udGVudDIgY21zem9uZR8CAgIfD2hkZAIxDw8WAh8PaGRkAjsPDxYCHw9oZGQCPw8PFgIfD2hkZBgBBR5fX0NvbnRyb2xzUmVx" />
+<input type="hidden" name="__VIEWSTATE3" id="__VIEWSTATE3" value="dWlyZVBvc3RCYWNrS2V5X18WAgUdY3RsMDAkU2VhcmNoSW5wdXQxJGJ0blNlYXJjaDIFFWN0bDAwJFBhZ2VNZW51MSRjdGwwMWCs0STDPqk1uPL7Czlw6GRpEo2i" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResourceb0fa.js?d=S5RFNmZDqPZwNw18kor0E1vHmvxXrOd30iQcVyge9VmAb85zCYcYmun__gGuYXPXLqyPbsHWZzNM4Buqjiknd1-u6RI1&amp;t=637729908413207958" type="text/javascript"></script>
+
+
+<script src="ScriptResourceff45.axd.js?d=2joFZ0G_A445Tqn4GiGiua-rr_gZbB3fvU8cOEliK3sPFin1WtkQbIF8DLvBN7U7Mqd4zlmmg6J5vYie52CnAd6WcVtsfbpdj_JqQPK1YhdpnJjKKZGvhDmK1aNfUsyF6P7iBAQdluk7vPd5IYQ4zSRc4f1VrgT-MeQsyPCFi1TBF68wICKdLC1gYcoqAm9IMY8RbX5VLK_XL9HuWRqomGHssMjjGxcqEXrKJEosYz5uggB1kEw7c1zScPS4-4O3ehVHoUCE_Y7WufPy9KXzeZ-1ot7hjvyV_kqsItJ6B8LZ9_2I6ndh1Vz3QcLr30a0mNBDL_3hEIwe7wGr42qcEqFdANzvuPBorXIywjP7P8Ieae3BtdR7n-Odfcl5dKmLWH3KNCoxGVDKaH5AZf8sWQ2Vm8GTD6ZadCh7L7cTeKyfLvUWtNq8YJTOjh7V3pz1Kh9wuVICCKkEf72kcXvU82MJ1oNqsQeFThiU0ihO6xuSzxf3_blHZBacNynb0CjWTB9oywvLf2FnU0immLkiuhXNKWdQkP3j9I_tYt0TYKbDrwJ90YjNHYVJwnrPXM0tGlc-cnVJjw1_8bKRu0cG0m9TUGY1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+document.getElementById('ctl00_ctl17').value = GetViewState__AspNetTreeView('ctl00_PageMenu1_ctl01_UL');
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAUdgx757rWn0aXv/g+YTmkWh40PwVBRKJxhcUVQFDm46iNz9todWSM/Uvo/vApf23eW6qlP5JE8ZqPoK6R3rKWnyVRh4qioPQhGRSFV9tl2sR2qnfD4TJ7hwcwhgdkYjbAqOoW0" />
+</div>
+    
+    
+    
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', 'aspnetForm', ['tctl00$PageMenu1$upMenu',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="art-page-background-middle-texture">
+    <div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl">
+            </div>
+            <div class="art-sheet-tr">
+            </div>
+            <div class="art-sheet-bl">
+            </div>
+            <div class="art-sheet-br">
+            </div>
+            <div class="art-sheet-tc">
+            </div>
+            <div class="art-sheet-bc">
+            </div>
+            <div class="art-sheet-cl">
+            </div>
+            <div class="art-sheet-cr">
+            </div>
+            <div class="art-sheet-cc">
+            </div>
+            <div class="art-sheet-body">
+                <div class="art-header">
+					<div class="art-header-center">
+
+						<div class="art-header-jpeg"><img alt='Intellectual Property Informationization Website(IPWOM) Provide Patent Search System、Patent Download Software etc intellectual property products and Patent Statistical Analysis etc services' src='/Data/Sites/2/skins/artisteer-30headermenu/images/header.jpg' /></div>
+					</div>
+                    <div class="art-logo">
+					    <h1 class='art-Logo-name art-logo-name siteheading '>Intellectual Property Informationization Website(IPWOM) Provide Patent Search System、Patent Download Software etc intellectual property products and Patent Statistical Analysis etc services</h1>
+
+
+                    </div>
+                
+
+                    
+                            
+                            
+
+                </div>
+                <div class="art-nav">
+                    <div class="art-nav-l"></div>
+                    <div class="art-nav-r"></div>
+                    
+
+<div class="art-nav-outer" id="ctl00_SiteMenu1_ctl00">
+		<ul class="art-hmenu">
+			<li>
+				<a href="home.html">
+					<span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+			</li>
+			<li>
+				<a href="ipget-patent-search-system.html">
+					<span class="l"></span><span class="r"></span><span class="t">Products</span></a>
+				<ul>
+					<li>
+						<a href="ipget-patent-search-system.html">
+							<span class="l"></span><span class="r"></span><span class="t">IPGet Patent Search System</span></a>
+					</li>
+					<li>
+						<a href="ipget-releasehistory.html">
+							<span class="l"></span><span class="r"></span><span class="t">Release History</span></a>
+					</li>
+					<li>
+						<a href="trial.html">
+							<span class="l"></span><span class="r"></span><span class="t">Trial</span></a>
+					</li>
+					<li>
+						<a href="subscribe.html">
+							<span class="l"></span><span class="r"></span><span class="t">Subscribe</span></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="documentation.html">
+					<span class="l"></span><span class="r"></span><span class="t">Support</span></a>
+				<ul>
+					<li>
+						<a href="documentation.html">
+							<span class="l"></span><span class="r"></span><span class="t">Documentation</span></a>
+						<ul>
+							<li>
+								<a href="ipget-help.html">
+									<span class="l"></span><span class="r"></span><span class="t">IPGet Patent Search System</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="videos.html">
+							<span class="l"></span><span class="r"></span><span class="t">Videos</span></a>
+						<ul>
+							<li>
+								<a href="ipget-videos.html">
+									<span class="l"></span><span class="r"></span><span class="t">IPGet Patent Search System</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="tutorials.html">
+							<span class="l"></span><span class="r"></span><span class="t">Tutorials</span></a>
+						<ul>
+							<li>
+								<a href="ipget-tutorials.html">
+									<span class="l"></span><span class="r"></span><span class="t">IPGet Patent Search System</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="faqs.html">
+							<span class="l"></span><span class="r"></span><span class="t">FAQs</span></a>
+					</li>
+					<li>
+						<a href="support-online.html">
+							<span class="l"></span><span class="r"></span><span class="t">Support Online</span></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="forums.html">
+					<span class="l"></span><span class="r"></span><span class="t">Community</span></a>
+				<ul>
+					<li>
+						<a href="forums.html">
+							<span class="l"></span><span class="r"></span><span class="t">Forums</span></a>
+					</li>
+					<li>
+						<a href="blog.html">
+							<span class="l"></span><span class="r"></span><span class="t">Blogs</span></a>
+					</li>
+					<li>
+						<a href="newsletters.html">
+							<span class="l"></span><span class="r"></span><span class="t">Newsletters</span></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="history.html">
+					<span class="l"></span><span class="r"></span><span class="t">About</span></a>
+				<ul>
+					<li>
+						<a href="history.html">
+							<span class="l"></span><span class="r"></span><span class="t">Us</span></a>
+						<ul>
+							<li>
+								<a href="history.html">
+									<span class="l"></span><span class="r"></span><span class="t">History</span></a>
+							</li>
+							<li>
+								<a href="vision-mission.html">
+									<span class="l"></span><span class="r"></span><span class="t">Vision and Mission</span></a>
+							</li>
+							<li>
+								<a href="blog.html">
+									<span class="l"></span><span class="r"></span><span class="t">Blog</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="roadmap.html">
+							<span class="l"></span><span class="r"></span><span class="t">Roadmap</span></a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="contact-information.html">
+					<span class="l"></span><span class="r"></span><span class="t">Contact</span></a>
+				<ul>
+					<li>
+						<a href="contact-information.html">
+							<span class="l"></span><span class="r"></span><span class="t">Contact Information</span></a>
+					</li>
+					<li>
+						<a href="message.html">
+							<span class="l"></span><span class="r"></span><span class="t">Post a Message</span></a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+</div>
+
+
+                    <div id='ctl00_SearchInput1_pnlS' class=''>
+
+<div id="ctl00_SearchInput1_pnlSearch" class="searchpanel " onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_SearchInput1_btnSearch2&#39;)" style="display:inline;">
+	
+<h2 id="ctl00_SearchInput1_heading" style="position: absolute; left:-2000px; text-indent: -999em;"><label for="ctl00_SearchInput1_txtSearch" id="ctl00_SearchInput1_lblSearchHeading">Site Search</label></h2>
+<input onfocus="javascript:watermarkEnter(this, &#39;enter search terms&#39;);" onblur="javascript:watermarkLeave(this, &#39;enter search terms&#39;);" name="ctl00$SearchInput1$txtSearch" type="text" id="ctl00_SearchInput1_txtSearch" title="Site Search" class="searchbox" />
+
+<input type="image" name="ctl00$SearchInput1$btnSearch2" id="ctl00_SearchInput1_btnSearch2" class="searchbutton" src="/Data/Sites/2/skins/artisteer-30headermenu/btnsearch.png" alt="Search" />
+
+</div>
+
+</div>
+                </div>
+                <div class="art-content-layout">
+				<div class="art-content-layout-row"> 
+                    <div id="ctl00_divLeft" class="art-layout-cell art-sidebar1 leftside left2column cmszone">
+	
+                        <div id='ctl00_PageMenu1_pnlOuterWrap' class='art-block'>
+<div class='art-block-tl'></div><div class='art-block-tr'></div><div class='art-block-bl'></div><div class='art-block-br'></div><div class='art-block-tc'></div><div class='art-block-bc'></div><div class='art-block-cl'></div><div class='art-block-cr'></div><div class='art-block-cc'></div><div class='art-block-body'>
+
+<div id='ctl00_PageMenu1_pnlInnerWrap' class='panelwrapper childpagesitemapmodule'>
+
+<div class='art-blockheader'><div class='l'></div><div class='r'></div><div class='art-header-tag-icon'><div class='t'><h3 class="t moduletitle"></h3></div></div></div>
+<div id='ctl00_PageMenu1_pnlOuterBody' class='art-blockcontent'>
+<div class='art-blockcontent-tl'></div><div class='art-blockcontent-tr'></div><div class='art-blockcontent-bl'></div><div class='art-blockcontent-br'></div><div class='art-blockcontent-tc'></div><div class='art-blockcontent-bc'></div><div class='art-blockcontent-cl'></div><div class='art-blockcontent-cr'></div><div class='art-blockcontent-cc'></div><div class='art-blockcontent-body'>
+<div id='ctl00_PageMenu1_pnlInnerBody' class='modulecontent'>
+
+
+
+<div id="ctl00_PageMenu1_upMenu">
+		
+
+		<div class="AspNet-TreeView" id="ctl00_PageMenu1_ctl01">
+				<ul id="ctl00_PageMenu1_ctl01_UL">
+					<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf AspNet-TreeView-Selected">
+						<a href="ipget-tutorials-patft.html">
+							Tutorial1: Download Patents From US PatFT</a>
+					</li>
+				</ul>
+
+		</div>
+
+	</div>
+
+
+
+</div>
+<div id='ctl00_PageMenu1_divFooter' class='modulefooter'>
+
+</div>
+</div><div class='cleared'></div>
+</div>
+<div id='ctl00_PageMenu1_divCleared' class='cleared'>
+
+</div>
+
+</div>
+
+</div>
+</div>
+                        
+                    
+</div>
+                    <div id="ctl00_divCenter" class="art-layout-cell art-content center-leftmargin cmszone">
+	
+                        
+                        
+                        <a id="startcontent"></a>
+                        
+<div id='ctl00_mainContent_ctl00_pnlOuterWrap' class='art-post'>
+<div class='art-post-tl'></div><div class='art-post-tr'></div><div class='art-post-bl'></div><div class='art-post-br'></div><div class='art-post-tc'></div><div class='art-post-bc'></div><div class='art-post-cl'></div><div class='art-post-cr'></div><div class='art-post-cc'></div><div class='art-post-body'>
+
+<div id='ctl00_mainContent_ctl00_pnlInnerWrap' class='panelwrapper htmlmodule'>
+
+<div class='art-postmetadataheader'><h2 id="module45" class="art-postheader moduletitle">Tutorial1: Use IPGet Patent Search System Batch Download Patents From US PatFT</h2></div>
+<div id='ctl00_mainContent_ctl00_pnlOuterBody' class='art-postcontent'>
+
+<div id='ctl00_mainContent_ctl00_pnlInnerBody' class='modulecontent'>
+
+
+<div id='ctl00_mainContent_ctl00_divContent' class=''>
+<p class="lqtext">&nbsp;</p>
+
+<p class="lqtext">This&nbsp;tutorial&nbsp;uses&nbsp;<a class="lqtextlink" href="ipget-patent-search-system.html" target="_blank" title="IPGet Patent Search System,IPGet Patent Download Software"><strong>IPGet Patent Search System</strong></a>&nbsp;to download Apple's patents&nbsp;applied&nbsp;in 2000 from USPTO- PatFT, &nbsp;<a href="ipget-videos-PatFT.html" target="_blank" title="IPGet Patent Search System,IPGet Patent Download Software">Here is the supporting video.</a></p>
+
+<p class="lqtext"><strong>Note</strong>: Batch downloading as much as possible to avoid rush hour traffic&nbsp;the thread number do not open too many, avoids to&nbsp;be&nbsp;banned. If non-essential, does not to&nbsp;batch download the full text, the abstract figure and so on time-consuming big items.</p>
+
+<p class="lqtext">1. How to install&nbsp;&nbsp;<a class="lqtextlink" href="ipget-patent-search-system.html" target="_blank" title="IPGet Patent Search System,IPGet Patent Download Software"><strong>IPGet Patent Search System</strong></a>&nbsp;can see&nbsp;<a class="lqtextlink" href="ipget-help-install.html" target="_blank" title="IPGet Patent Search System,IPGet Patent Download Software">Installation</a>.</p>
+
+<p class="lqtext">2. &nbsp;Create a sub node below&nbsp;<b style="font-size: 14px; text-indent: 28px;">Projects&nbsp;</b>node in Main UI's&nbsp;Navigation Tree,&nbsp;as shown below:</p>
+
+<p>&nbsp;</p>
+
+<p style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-01.jpg" />&nbsp;&nbsp;&nbsp;<img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-02.jpg" /></p>
+
+<p class="lqtext">3. Select the <strong>Downloading</strong> node, Click the <strong>Search</strong> button in the <strong>Grid Tool Bar</strong>, then will open the <strong>Patent Search</strong> form,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-03.jpg" /></p>
+
+<p class="lqtext">4．In the <strong>Patent Search</strong> Form, Slect <strong>PatFT</strong> in the <strong>Site</strong> combobox,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-04.jpg" /></p>
+
+<p class="lqtext">5.&nbsp;In the <strong>Patent Search</strong> Form, <strong>Double</strong> click <strong>Apple</strong> node in the <strong>Save to</strong> combobox,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-05.jpg" /></p>
+
+<p class="lqtext">6. In the<strong> Query</strong> textbox input <strong>AN/Apple and APD/1/1/2000-&gt;12/31/2000</strong>, this will search all Apple's patents applied in 2000,&nbsp;as shown below:</p>
+
+<p style="text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-06.jpg" /></p>
+
+<p class="lqtext">7. Click the <strong>Search</strong> Button,&nbsp;As shown below:</p>
+
+<p style="text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-07.jpg" /></p>
+
+<p class="lqtext">8.&nbsp;About &nbsp;after 5~10 seconds, &nbsp;will see there are 103 patents, the <strong>Download&nbsp;button</strong><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/Help/task/IPGet Patent Search System-btnDownload.jpg" />&nbsp;in&nbsp;the toolbar will become enabled<img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/Help/task/IPGet Patent Search System-btnDownload.jpg" />&nbsp;from disabled, Checked the<strong> Auto Next Page</strong>&nbsp;<img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/Help/task/IPGet Patent Search System-task-19.jpg" />&nbsp;checkbox in the toolbaar,&nbsp;Prapare to batch downloading patents,&nbsp;as shown below:</p>
+
+<p style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-08.jpg" /></p>
+
+<p class="lqtext">9.Click the <strong>Download button</strong><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/Help/task/IPGet Patent Search System-btnDownload.jpg" />，After 5~10 seconds,&nbsp;the browser will not stop turns the page until the last page, When&nbsp;turn a page, all the patents in the page will be grabed to the local database,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-09.jpg" /></p>
+
+<p class="lqtext">10. Move the <strong>Patent Search</strong> form&nbsp;away or minimize it, then user&nbsp;can see the the patents are downaloding in the Main UI,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-10.jpg" /></p>
+
+<p class="lqtext">11. Depending on the network speed,&nbsp;Usually about 3 minutes, the page will turn to the last page, all patents list will be grabed to the local database, and the <strong>Patent Search</strong> form can be closed,&nbsp;As shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-11.jpg" /></p>
+
+<p class="lqtext">12.&nbsp;Depending on the network speed,&nbsp;Usually about 3~5 &nbsp;minutes, all the patents's&nbsp;bibliographic data will be <span style="font-size: 14px; text-indent: 28px;">download&nbsp;</span>complete, all the patents will be Saved&nbsp;to the&nbsp;<strong>Apple</strong> tree node and disappeared&nbsp;from the the <strong>Downloading</strong> tree node,&nbsp;As shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-12.jpg" /></p>
+
+<p class="lqtext">Above figure shows 103 patents are all be downloaded.</p>
+
+<p class="lqtext">13.<strong> Double</strong> click a&nbsp;patent in the grid, will open the patent's detail information form,&nbsp;as shown below:</p>
+
+<p class="lqtext" style="font-family: Simsun; text-align: center; "><img alt="IPGet Patent Search System,IPGet Patent Download Software" src="/Data/Sites/2/media/LQ/IPGet/tutorials/patft/IPGet Patent Search System-13.jpg" /></p>
+
+<p class="lqtext">Above figure show the pagent's&nbsp;bibliographic data items are all downloaded to local database.</p>
+
+<p class="lqtext">This tutorial is finished,&nbsp;<a class="lqtextlink" href="ipget-videos-PatFT.html" target="_blank" title="IPGet Patent Search System,IPGet Patent Download Software">Here is the supporting video.</a></p>
+
+</div>
+<input type="hidden" name="ctl00$mainContent$ctl00$hdnIsDirty" id="ctl00_mainContent_ctl00_hdnIsDirty" />
+
+
+
+
+
+
+</div>
+<div id='ctl00_mainContent_ctl00_divFooter' class='modulefooter'>
+
+</div>
+
+</div>
+<div id='ctl00_mainContent_ctl00_divCleared' class='cleared'>
+
+</div>
+
+</div>
+
+</div><div class='cleared'></div>
+</div>
+
+                    
+</div>
+                    
+					</div>
+                </div>
+            
+            
+                <div class="cleared"></div>
+                <div class="art-footer">
+                    <div class="art-footer-t"></div>
+						<div class="art-footer-l"></div>
+						<div class="art-footer-b"></div>
+						<div class="art-footer-r"></div>
+						<div class="art-footer-body">
+                        <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+						<div class="art-footer-text">
+                            <p>
+                            Provide <a href="ipget-patent-search-system.html">IPGet Patent Search System</a>、<a href="ipget-patent-search-system.html">IPGet Patent Download Software</a> etc intellectual property products and <a href="ipget-patent-search-system.html">Patent Search</a>、<a href="ipget-patent-search-system.html">Patent Download</a>、<a href="ipget-patent-search-system.html">Patent Statistical Analysis</a>  etc services<br/>
+                            <a href="index.html">Copyright &copy; 2011 - 2022 Intellectual Property Informationization Website, All Rights Reserved</a>
+                            </p>
+                        </div>
+                    </div>
+                <div class="art-footer-background">
+                </div>
+                </div>
+                <div class="cleared">
+                </div>
+            </div>
+            <div class="cleared">
+            </div>
+        </div>
+    </div>
+	</div>
+	<div class="topnavwrap">
+	    <div class="topnav">
+            <ul>
+                
+                <li class="firstnav"><a class="sitelink homelink" href="index.html">Home</a></li>
+                <li class="topnavitem">
+		    <a id="ctl00_forum" class="sitelink forumlink" href="forums.html">Forums</a>
+                </li> 
+                <li class="topnavitem">
+                    <a id="ctl00_blog" class="sitelink bloglink" href="blog.html">Blogs</a>
+                </li> 
+                <li class="topnavitem"><a class="sitelink topsitemaplink" href="SiteMap.html">Site Map</a></li>
+                
+                
+                
+                
+                <li class="topnavitem"><a class="sitelink registerLink" rel="nofollow" href="/Secure/Register.html?returnurl=%2fipget-tutorials-patft.aspx">Register</a></li>
+                <li class="topnavitem"><a class="sitelink loginlink" rel="nofollow" href="/Secure/Login.html?returnurl=%2fipget-tutorials-patft.aspx">Sign In</a></li>
+                
+                <li class="topnavitem">
+					<span id="ctl00_langSelect1_Label1" class="langlbl">Language: </span>
+
+<a id="ctl00_langSelect1_lang1" title="中文" class="langhl" href="http://www.ipwom.com/home.html"><img title="中文" src="/Data/Sites/1/skins/artisteer-30headermenu/images/China.gif" alt="中文" /></a>
+<a id="ctl00_langSelect1_lang2" title="English" class="langhl" href="http://en.ipwom.com/home.html"><img title="English" src="/Data/Sites/1/skins/artisteer-30headermenu/images/America.gif" alt="English" /></a>
+
+                </li> 
+            </ul>
+        </div>
+	</div>
+
+    <script type="text/javascript">
+        function HideMenuToolbar() { $("#toolbar").fadeOut(); $("#toolbarbut").fadeIn("slow"); }
+        function ShowMenuToolbar() { $("#toolbar").fadeIn(); $("#toolbarbut").fadeOut("slow"); }
+        $(document).ready(function() {
+            $("span.downarr a").click(function() { HideMenuToolbar(); Set_Cookie('openstate', 'closed') });
+            $("span.showbar a").click(function() { ShowMenuToolbar(); Set_Cookie('openstate', 'open') });
+            $("span.downarr a, span.showbar a").click(function() { return false; });
+            var openState = Get_Cookie('openstate');
+            if (openState != null) { if (openState == 'closed') { HideMenuToolbar(); } if (openState == 'open') { ShowMenuToolbar(); } }
+        });	
+    </script>
+
+    
+    
+    <div>
+	<input type="hidden" name="ctl00$ctl17" id="ctl00_ctl17" />
+</div>
+<script type="text/javascript">Sys.Application.add_load(function() { var form = Sys.WebForms.PageRequestManager.getInstance()._form; form._initialAction = form.action = window.location.href; }); </script>
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+
+<script type="text/javascript" > $('div.mojo-accordion').accordion({});$('div.mojo-accordion-nh').accordion({heightStyle:'content',animate:{opacity:'toggle',duration:'400'}}); $('div.mojo-tabs').tabs({}); $('input.jqbutton').button(); $('.jqtt').tooltip(); $('.faqs dd').hide();$('.faqs dt').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')}).click(function(){ $(this).next().slideToggle('normal'); });  $("a.unclickable").click(function(){ return false; });</script><script type='text/javascript'>
+<!--
+
+  var wmctl00_SearchInput1_txtSearch = document.getElementById('ctl00_SearchInput1_txtSearch'); if(wmctl00_SearchInput1_txtSearch){wmctl00_SearchInput1_txtSearch.value = 'enter search terms';}
+//-->
+</script></form>
+	
+</body>
+</html>

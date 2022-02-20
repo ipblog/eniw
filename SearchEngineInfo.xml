@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Intellectual Property Informationization Website Site Search</ShortName>
+  <Description>The search engine included in mojoPortal Content Managment System</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image type="image/x-icon" width="16" height="16">https://en.ipwom.com/Data/Sites/2/skins/artisteer-30headermenu/favicon.ico</Image>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://en.ipwom.com/SearchEngineInfo.xml" />
+  <Url type="application/atom+xml" template="https://en.ipwom.com/SearchResults.xml?q={searchTerms}&amp;p={startPage?}" />
+  <Url type="text/html" template="https://en.ipwom.com/SearchResults.html?q={searchTerms}&amp;p={startPage?}" />
+  <moz:SearchForm>https://en.ipwom.com/SearchResults.html</moz:SearchForm>
+</OpenSearchDescription>
