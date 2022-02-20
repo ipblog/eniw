@@ -66,6 +66,8 @@ SearchEngineInfo.ashx 改名为 SearchEngineInfo.xml
    为
    .html
 
+6.1 trial.html中的"../www.softpedia.com/改为http://www.softpedia.com/
+
 7.拷贝目录 
   ClientScript
   Data
